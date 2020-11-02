@@ -28,7 +28,8 @@
 //    }
         
         const Titulo = ()=>{
-            return <h1>Meu titulo</h1>
+            const numero = Math.random() * 1000;
+            return <h1>Meu titulo {numero}</h1>
         }
 
         function App(){
@@ -42,7 +43,24 @@
             </div>
         }
 
-    ReactDOM.render(<App/>,document.getElementById('app'))
+
+
+        // EVENTOS
+
+
+        const AnotherButton = ()=>{
+            function handleClick(event){
+                console.log(event.target.innerText)
+            }
+
+            return <button onClick={handleClick}>Comprado!</button>
+
+        }
+
+
+
+
+    ReactDOM.render(<AnotherButton/>,document.getElementById('app'))
     </script>
 
 </body>
