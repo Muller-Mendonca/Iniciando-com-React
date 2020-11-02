@@ -15,12 +15,10 @@
     <div id="app"></div>
 
     <script type="text/babel">
-    function App(){
-        return <div>Meu App</div>
-    }
+    
 
-    const Second = () =>{
-        return <h1>Segundo</h1>
+    const Button = () =>{
+        return <button>Login</button>
     }
 
 //    class Button extends React.Component {
@@ -28,8 +26,23 @@
 //            return <button>Comprar</button>
 //        }
 //    }
+        
+        const Titulo = ()=>{
+            return <h1>Meu titulo</h1>
+        }
 
-    ReactDOM.render(<Button/>,document.getElementById('app'))
+        function App(){
+            return <div>Meu App
+                <Titulo/>
+                <Button/>
+                <div>
+                    Compre aqui também
+                    <Button/>
+                </div>
+            </div>
+        }
+
+    ReactDOM.render(<App/>,document.getElementById('app'))
     </script>
 
 </body>
