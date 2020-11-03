@@ -72,12 +72,24 @@
                 setContador(contador + 1);
             }
 
+
+            function tirar (){
+                setContador(contador - 1);
+            }
+
+            
+
             return (
                 <div>
-                    <button onClick={comprar}>Comprar</button>
+                    <button onClick={comprar}>Adicionar</button>
                     <p>Total: {contador}</p>
                     <p>Preço: R$ {contador * 250}</p>
+                    <div>
+                        <button onClick={tirar}>Retirar</button>
+                    </div>
                 </div>
+
+                
             )
         }
 
