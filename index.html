@@ -72,9 +72,11 @@
                 setContador(contador + 1);
             }
 
-
-            function tirar (){
+            function tirar(){
                 setContador(contador - 1);
+                if(contador <= 0){
+                    setContador(contador)
+                };
             }
 
             
@@ -86,6 +88,7 @@
                     <p>Preço: R$ {contador * 250}</p>
                     <div>
                         <button onClick={tirar}>Retirar</button>
+                        <h1>FAÇA SEU PEDIDO</h1>
                     </div>
                 </div>
 
