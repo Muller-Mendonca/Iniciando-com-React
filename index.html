@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>React para Iniciantes</title>
+    <link rel="stylesheet" href="style.css">
 
     <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>  
     <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
@@ -79,16 +80,20 @@
                 };
             }
 
+            function zerar(){
+                setContador(contador - contador);
+            }
+
             
 
             return (
-                <div>
+                <div className='center'>
                     <button onClick={comprar}>Adicionar</button>
                     <p>Total: {contador}</p>
                     <p>Preço: R$ {contador * 250}</p>
                     <div>
                         <button onClick={tirar}>Retirar</button>
-                        <button onClick={tirar}>Retirar</button>
+                        <button onClick={zerar}>Zerar</button>
                         <h1>FAÇA SEU PEDIDO</h1>
                         <AnotherButton/>
                     </div>
