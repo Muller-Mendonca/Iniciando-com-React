@@ -51,7 +51,7 @@
 
         const AnotherButton = ()=>{
             function handleClick(){
-                console.log('SEU PEDIDO FOI FINALIZADO');
+                alert('SEU PEDIDO FOI FINALIZADO');
             }
 
             return <button onClick={handleClick}>Comprar</button>
@@ -90,7 +90,7 @@
                 <div className='center'>
                     <button onClick={comprar}>Adicionar</button>
                     <p>Total: {contador}</p>
-                    <p>Preço: R$ {contador * 250}</p>
+                    <p style={{color: 'green'}}>Preço: R$ {contador * 250}</p>
                     <div>
                         <button onClick={tirar}>Retirar</button>
                         <button onClick={zerar}>Zerar</button>
@@ -98,8 +98,6 @@
                         <AnotherButton/>
                     </div>
                 </div>
-
-                
             )
         }
 
