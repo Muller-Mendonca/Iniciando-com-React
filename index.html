@@ -87,19 +87,15 @@
                 setContador(contador - contador);
             }
 
-            function result(){
-                
-            }
-
             
 
             return (
                 <div className='center'>
-                    <button onClick={comprar}>Adicionar</button>
+                    <button onClick={comprar}>Adicionar +</button>
                     <p>Total: {contador}</p>
                     <p style={{color: '#01579b'}}>Preço: R$ {contador * 250}</p>
                     <div>
-                        <button onClick={tirar}>Retirar</button>
+                        <button onClick={tirar}>Retirar -</button>
                         <button onClick={zerar}>Zerar</button>
                         <h1>FAÇA SEU PEDIDO</h1>
                         <AnotherButton/>
@@ -109,13 +105,17 @@
             )
         }
 
-        
+
+        const Testando = () =>{
+            return (
+                <div>
+                <p>Testando</p>
+                </div>
+            )
+        }
 
 
-
-
-
-    ReactDOM.render(<Compras/>,document.getElementById('app'))
+    ReactDOM.render(<Testando/>,document.getElementById('app'))
     </script>
 
 </body>
